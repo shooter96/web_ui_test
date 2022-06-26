@@ -1,0 +1,2 @@
+做ui自动化的前提：
+1、chromedriver的版本与chrome的浏览器要匹配
