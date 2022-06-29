@@ -38,7 +38,7 @@ class TestMqttDevice:
         '''
         self.driver.implicitly_wait(5)
         # 进入iframe
-        self.driver.switch_to.frame("app-runner-10001")
+        self.device_page.switch_into_iframe()
 
         # 新增设备类
         product_page = ProductPage(self.driver)

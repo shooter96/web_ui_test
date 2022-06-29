@@ -6,6 +6,7 @@ class DeviceManagePageLoc:
     # 左面应用菜单获取
     desktop_menu_loc = (By.XPATH, '//a[text()="应用"]')
     # 设备管理模块相关元素
+    iframe_element = (By.XPATH, '//iframe')
     device_manage_menu_loc = (By.XPATH, '//span[text()="设备管理"]')
 
     # ---------------设备类最外层-------------------

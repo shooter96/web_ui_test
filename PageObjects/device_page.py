@@ -4,9 +4,16 @@ from Common.basepage import BasePage
 from selenium.webdriver.common.keys import Keys
 from PageLocators.device_manage_loc import DeviceManagePageLoc as DML
 import time
+from Common.JS import addAttribute
 
 
 class DevicePage(BasePage):
+    def switch_into_iframe(self):
+        iframe_element = self.get_element(DML.iframe_element,"查找iframe元素")
+        addAttribute(self.driver, iframe_element, 'name', 'auto_into_iframe')
+        time.sleep(1)
+        self.driver.switch_to.frame('auto_into_iframe')
+
     def add_device(self, devId, devName, secret, pk=None, groupName="默认分组"):
         self.click_element(DML.product_menu_loc, "进入设备类模块")
         time.sleep(1)
